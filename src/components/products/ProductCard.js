@@ -1,17 +1,17 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
-import { ProductPreview } from "./ProductPreview";
-import { ProductIcon } from "./ProductIcon";
+import { ProductCardScreen } from "./ProductScreens";
+import { ProductMark } from "./ProductMark";
 import { ProductLink } from "./ProductLink";
 
 /** Homepage product card. */
 export function ProductCard({ product }) {
   return (
     <article className="group flex h-full flex-col rounded-[var(--radius-card)] border border-line bg-surface p-5 shadow-card transition-[box-shadow,transform,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-line-strong hover:shadow-lift sm:p-6">
-      <ProductPreview product={product} />
+      <ProductCardScreen product={product} />
 
       <div className="mt-6 flex items-center gap-3">
-        <ProductIcon product={product} />
+        <ProductMark product={product} />
         <div>
           <h3 className="text-h3">{product.name}</h3>
           <p className="text-sm text-subtle">{product.category}</p>

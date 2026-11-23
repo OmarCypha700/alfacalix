@@ -72,6 +72,7 @@ export function ProductsShowcase() {
           </Reveal>
         ))}
       </div>
+      <p className="mt-6 text-sm text-subtle">Screens show sample data.</p>
     </Section>
   );
 }

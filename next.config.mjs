@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  allowedDevOrigins: ['192.168.85.117'],
   cacheComponents: true,
   partialPrefetching: true,
   poweredByHeader: false,

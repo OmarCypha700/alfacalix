@@ -5,9 +5,11 @@
  * without touching any component. While a URL is empty the site shows a
  * "landing page coming soon" state instead of a link.
  *
- * `image`: leave null to show the illustrative interface sketch. When a real
- * screenshot is available, add it under /public/images/products/<slug>/ and
- * set the path (plus `imageAlt`) here.
+ * `mark`: the product's own icon (null shows a text monogram).
+ * `screens`: real screenshots of each product, taken with sample data, in
+ * /public/images/products/<slug>/. `card` is a square crop for the homepage;
+ * `desktop` and `phone` appear together on the Products page. To replace one,
+ * overwrite the file (same size) or change the path, width and height here.
  */
 
 const clean = (value) => (typeof value === "string" ? value.trim() : "");
@@ -46,9 +48,27 @@ export const products = [
       "Clinical examiners and assessors",
       "Academic administrators",
     ],
-    icon: "ClipboardCheck",
-    image: null,
-    imageAlt: "",
+    mark: { src: "/images/products/clinova/clinova-mark.png" },
+    screens: {
+      card: {
+        src: "/images/products/clinova/clinova-scoring-card.webp",
+        alt: "ClinOva on a phone: an examiner scoring a student's intramuscular medication procedure, 9 of 23 steps saved",
+        width: 780,
+        height: 780,
+      },
+      desktop: {
+        src: "/images/products/clinova/clinova-student-procedures.webp",
+        alt: "ClinOva's Student Procedures view: each assessment with both examiners' scores, status and reconciliation",
+        width: 2000,
+        height: 1250,
+      },
+      phone: {
+        src: "/images/products/clinova/clinova-reconciliation-phone.webp",
+        alt: "ClinOva's score reconciliation screen on a phone, showing Examiner A and Examiner B side by side",
+        width: 780,
+        height: 1507,
+      },
+    },
     url: clean(process.env.NEXT_PUBLIC_CLINOVA_URL),
     ctaLabel: "Explore ClinOva",
   },
@@ -85,9 +105,27 @@ export const products = [
       "Lecturers and heads of department",
       "Students",
     ],
-    icon: "GraduationCap",
-    image: null,
-    imageAlt: "",
+    mark: null,
+    screens: {
+      card: {
+        src: "/images/products/sis/sis-student-results-card.webp",
+        alt: "SIS student portal on a phone: cumulative GPA, credits earned and academic standing",
+        width: 780,
+        height: 780,
+      },
+      desktop: {
+        src: "/images/products/sis/sis-admin-dashboard.webp",
+        alt: "SIS administrator dashboard: active students, registrations, course offerings, students by programme and outstanding work",
+        width: 2000,
+        height: 1250,
+      },
+      phone: {
+        src: "/images/products/sis/sis-course-registration-phone.webp",
+        alt: "SIS course registration on a phone, with compulsory courses selected and the credit total",
+        width: 780,
+        height: 1688,
+      },
+    },
     url: clean(process.env.NEXT_PUBLIC_SIS_URL),
     ctaLabel: "Discover SIS",
   },
@@ -124,9 +162,27 @@ export const products = [
       "Current students",
       "Alumni",
     ],
-    icon: "FileText",
-    image: null,
-    imageAlt: "",
+    mark: { src: "/images/products/drs/drs-mark.png" },
+    screens: {
+      card: {
+        src: "/images/products/drs/drs-applicant-requests-card.webp",
+        alt: "DRS on a phone: an applicant's document requests marked Submitted, Under Review and Ready",
+        width: 780,
+        height: 780,
+      },
+      desktop: {
+        src: "/images/products/drs/drs-registry-queue.webp",
+        alt: "DRS registry queue: document requests with applicant, status, payment, delivery method and total",
+        width: 2000,
+        height: 1250,
+      },
+      phone: {
+        src: "/images/products/drs/drs-applicant-requests-phone.webp",
+        alt: "DRS applicant view on a phone, listing requests and their status",
+        width: 780,
+        height: 1688,
+      },
+    },
     url: clean(process.env.NEXT_PUBLIC_DRS_URL),
     ctaLabel: "Explore DRS",
   },

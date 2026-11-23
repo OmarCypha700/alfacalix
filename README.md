@@ -64,7 +64,8 @@ All variables are listed in [`.env.example`](.env.example). Anything left empty 
 
 - **Product landing-page URLs**: set `NEXT_PUBLIC_CLINOVA_URL` / `_SIS_URL` / `_DRS_URL` in Vercel and redeploy. No code changes needed.
 - **Product text, features and audiences**: edit `src/data/products.js`.
-- **Product screenshots**: add e.g. `public/images/products/clinova/clinova-preview.webp` (about 1200×800), then set `image` and `imageAlt` for that product in `src/data/products.js`. Until then a clearly labelled illustrative sketch is shown, not a fake screenshot.
+- **Product screenshots**: each product has three real screens in `public/images/products/<slug>/`, listed under `screens` in `src/data/products.js`: `card` (780×780 phone crop, homepage), `desktop` (2000×1250 crop of the main content, no sidebar) and `phone` (780 wide, overlaid on the Products page). They were taken from the actual apps using sample data only: ClinOva's own sample screens, SIS's `seed_demo` (the fictitious Northridge College) and fictitious DRS requests. To update one, replace the file or change its path, `width`, `height` and `alt`. Never use screens that show real students or a client institution's logo.
+- **Product icons**: `mark` in `src/data/products.js` (ClinOva's shield and DRS's "D" icon, from their own projects). SIS has no icon yet, so it shows a text monogram until one is added.
 - **Contact details and social links**: set the `NEXT_PUBLIC_CONTACT_*` and `NEXT_PUBLIC_SOCIAL_*` variables.
 - **Logo**: add the file to `public/logos/` and set `logo` (and optionally `logoDark` for navy backgrounds) in `src/data/company.js`. The temporary text wordmark is replaced everywhere.
 - **Leadership profiles** (About page): add verified entries to `leadership` in `src/data/company.js`. The section stays hidden while the list is empty.
@@ -86,7 +87,7 @@ If any of the three required values is missing, the API returns `503 not_configu
 ## Deploying to Vercel
 
 1. Push this repository to GitHub.
-2. In Vercel, choose **Add New → Project**, import the repository and keep the detected Next.js settings. If the repository root is the parent folder, set **Root Directory** to `alfa-calix`.
+2. In Vercel, choose **Add New → Project**, import the repository and keep the detected Next.js settings. The project sits at the repository root, so leave **Root Directory** empty.
 3. Add the environment variables (Production, and Preview if wanted).
 4. Deploy.
 

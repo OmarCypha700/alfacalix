@@ -2,9 +2,11 @@ import { Check } from "lucide-react";
 import { company } from "@/data/company";
 import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/shared/Reveal";
-import { ProductPreview } from "./ProductPreview";
-import { ProductIcon } from "./ProductIcon";
+import { ProductDetailScreens } from "./ProductScreens";
+import { ProductMark } from "./ProductMark";
 import { ProductLink } from "./ProductLink";
+
+const listHeading = "mb-4 font-sans text-base font-semibold text-navy-900";
 
 /** Detailed product section for the Products page. */
 export function ProductDetail({ product, index }) {
@@ -17,16 +19,20 @@ export function ProductDetail({ product, index }) {
       className={cn("scroll-mt-24 py-16 md:py-24", index > 0 && "border-t border-line")}
     >
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-        <Reveal className={cn("lg:sticky lg:top-28", reversed && "lg:order-2")}>
-          <ProductPreview product={product} priority={index === 0} />
-        </Reveal>
+        {index === 0 ? (
+          <div className="lg:sticky lg:top-28">
+            <ProductDetailScreens product={product} priority />
+          </div>
+        ) : (
+          <Reveal className={cn("lg:sticky lg:top-28", reversed && "lg:order-2")}>
+            <ProductDetailScreens product={product} />
+          </Reveal>
+        )}
 
         <div>
           <div className="flex items-center gap-3">
-            <ProductIcon product={product} />
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-accent-700">
-              {product.category}
-            </p>
+            <ProductMark product={product} />
+            <p className="text-[0.9375rem] font-medium text-accent-700">{product.category}</p>
           </div>
           <h2 id={headingId} className="text-h2 mt-5">
             {product.fullName}
@@ -41,7 +47,7 @@ export function ProductDetail({ product, index }) {
 
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
             <div>
-              <h3 className="mb-4 font-sans text-sm font-semibold uppercase tracking-[0.14em] text-navy-900">
+              <h3 className={listHeading}>
                 Key features
               </h3>
               <ul className="space-y-2.5 text-[0.9375rem]">
@@ -54,7 +60,7 @@ export function ProductDetail({ product, index }) {
               </ul>
             </div>
             <div>
-              <h3 className="mb-4 font-sans text-sm font-semibold uppercase tracking-[0.14em] text-navy-900">
+              <h3 className={listHeading}>
                 Designed for
               </h3>
               <ul className="space-y-2.5 text-[0.9375rem]">
@@ -71,7 +77,9 @@ export function ProductDetail({ product, index }) {
           <div className="mt-10">
             <ProductLink product={product} size="lg" />
           </div>
-          <p className="mt-6 text-xs text-subtle">Developed and powered by {company.brandName}.</p>
+          <p className="mt-6 text-sm text-subtle">
+            Developed and powered by {company.brandName}. Screens show sample data.
+          </p>
         </div>
       </div>
     </section>
