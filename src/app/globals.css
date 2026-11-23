@@ -1,26 +1,173 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ------------------------------------------------------------------
+   Alfa Calix Technologies — design tokens
+   Colours, type and radii live here so every component draws from
+   one source. Change a token here and the whole site follows.
+------------------------------------------------------------------- */
+@theme {
+  /* Brand navy (primary) */
+  --color-navy-50: #eef2f8;
+  --color-navy-100: #d9e1ee;
+  --color-navy-200: #b3c2db;
+  --color-navy-300: #8098bf;
+  --color-navy-400: #4f6c9c;
+  --color-navy-500: #2f4d7d;
+  --color-navy-600: #223c66;
+  --color-navy-700: #1a3056;
+  --color-navy-800: #122545;
+  --color-navy-900: #0b1b33;
+  --color-navy-950: #060f1f;
+
+  /* Accent (restrained teal-cyan). 600+ meet AA on white; 300/400 for dark surfaces. */
+  --color-accent-50: #e9fbfc;
+  --color-accent-100: #c8f3f6;
+  --color-accent-200: #96e6ed;
+  --color-accent-300: #5fd3df;
+  --color-accent-400: #27bccc;
+  --color-accent-500: #109fb0;
+  --color-accent-600: #0b8494;
+  --color-accent-700: #0d6a77;
+  --color-accent-800: #115561;
+
+  /* Neutrals */
+  --color-canvas: #f7f8fa;
+  --color-surface: #ffffff;
+  --color-line: #e3e7ee;
+  --color-line-strong: #cdd4df;
+  --color-ink: #0a1426;
+  --color-muted: #4a5568;
+  --color-subtle: #64708a;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
+
+  --radius-card: 1.25rem;
+
+  --shadow-card: 0 1px 2px rgb(11 27 51 / 0.04), 0 8px 24px -12px rgb(11 27 51 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(11 27 51 / 0.05), 0 24px 48px -20px rgb(11 27 51 / 0.25);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 5.5rem;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-navy-900;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    @apply bg-accent-200 text-navy-950;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-500;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Fluid type scale */
+  .text-display {
+    font-size: clamp(2.5rem, 1.6rem + 3.6vw, 4.5rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+    font-weight: 700;
+  }
+  .text-h1 {
+    font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+  }
+  .text-h2 {
+    font-size: clamp(1.875rem, 1.45rem + 1.7vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+  .text-h3 {
+    font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+    line-height: 1.25;
+    font-weight: 650;
+  }
+  .text-lead {
+    font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+    line-height: 1.65;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent-700;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-6 bg-current;
+  }
+
+  /* Prose for policy pages */
+  .prose-legal {
+    @apply max-w-[68ch] text-[1.0625rem] leading-relaxed text-muted;
+  }
+  .prose-legal h2 {
+    @apply mt-12 mb-4 text-2xl font-bold;
+  }
+  .prose-legal h3 {
+    @apply mt-8 mb-3 text-lg font-semibold;
+  }
+  .prose-legal p {
+    @apply mb-4;
+  }
+  .prose-legal ul {
+    @apply mb-4 list-disc space-y-2 pl-6;
+  }
+  .prose-legal a {
+    @apply font-medium text-accent-700 underline underline-offset-4 hover:text-navy-900;
+  }
+
+  /* Faint engineering grid used on hero and dark bands */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(11 27 51 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(11 27 51 / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+/* Respect reduced-motion everywhere, including CSS transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
