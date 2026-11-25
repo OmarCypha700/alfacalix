@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept A, Ligature v2 (exploration, strokes)</title>
+  <!-- C: circle r=92 centred (124,136) from the apex round the left to a 60° terminal.
+       A: 2:1 diagonal from the same apex (124,44) to the foot (216,228); the crossbar is a short stub that leaves
+       the diagonal and stops at the C's centre line, so the C stays open. Stroke 34. -->
+  <g fill="none" stroke="#111" stroke-width="34" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path d="M216 228 L124 44 A92 92 0 0 0 32 136 A92 92 0 0 0 170 215.67"/>
+    <path d="M124 160 H184"/>
+  </g>
+</svg>

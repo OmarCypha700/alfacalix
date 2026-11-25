@@ -47,12 +47,16 @@ export const company = {
   ].filter((item) => item.href),
 
   /**
-   * Logo files. Leave as null to use the typographic wordmark.
-   * To use a real logo, add it to /public/logos and set the path, e.g.
-   * "/logos/alfa-calix-logo.svg". Set `logoDark` for use on navy surfaces.
+   * Logo files (masters and the full kit live in /brand/logo).
+   * `logo` is the horizontal full-colour lockup for light surfaces, `logoDark` the version for navy surfaces,
+   * `logoSquare` the square symbol PNG used in structured data (search engines prefer a raster square).
+   * Set `logo` to null to fall back to the typographic wordmark.
    */
-  logo: null,
-  logoDark: null,
+  logo: "/logos/alfa-calix-logo.svg",
+  logoDark: "/logos/alfa-calix-logo-dark.svg",
+  logoSquare: "/logos/alfa-calix-symbol-512.png",
+  /** Intrinsic size of the horizontal lockup's viewBox, for layout without shift. */
+  logoSize: { width: 902, height: 224 },
 
   /** Date the site content was last reviewed; used by the sitemap. */
   lastUpdated: "2026-11-23",

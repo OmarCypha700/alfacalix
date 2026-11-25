@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 256" width="1000" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept C lockup (exploration: live text, outline before delivery)</title>
+  <g id="symbol" fill="#111">
+    <path d="M40 204 Q128 -100 216 204 L180 204 Q128 -12 76 204 Z"/>
+    <rect x="103" y="142" width="50" height="26"/>
+  </g>
+  <g id="wordmark" fill="#111" font-family="Segoe UI Variable Display, Segoe UI, sans-serif">
+    <text x="284" y="146" font-size="104" font-weight="300" letter-spacing="1">Alfa Calix</text>
+    <text x="290" y="198" font-size="30" font-weight="600" letter-spacing="10">TECHNOLOGIES</text>
+  </g>
+</svg>

@@ -21,7 +21,7 @@ export function ProductDetail({ product, index }) {
       <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
         {index === 0 ? (
           <div className="lg:sticky lg:top-28">
-            <ProductDetailScreens product={product} priority />
+            <ProductDetailScreens product={product} preload />
           </div>
         ) : (
           <Reveal className={cn("lg:sticky lg:top-28", reversed && "lg:order-2")}>

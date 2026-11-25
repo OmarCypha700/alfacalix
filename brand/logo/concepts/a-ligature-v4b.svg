@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept A, Ligature v4b (no crossbar; C terminal turns into the A's foot)</title>
+  <!-- The C's lower terminal runs out horizontally to the right, like the base of an A, stopping short of the diagonal. -->
+  <g fill="none" stroke="#111" stroke-width="34" stroke-linejoin="miter" stroke-miterlimit="10">
+    <path d="M220 220 L128 36 A92 92 0 0 0 36 128 A92 92 0 0 0 128 220 H150"/>
+  </g>
+</svg>

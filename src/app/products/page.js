@@ -1,15 +1,22 @@
 import Link from "next/link";
-import { products } from "@/data/products";
+import { productList, products } from "@/data/products";
 import { buildMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container } from "@/components/shared/Container";
 import { CtaBand } from "@/components/shared/CtaBand";
 import { ProductDetail } from "@/components/products/ProductDetail";
 
+// Titles and copy are built from src/data/products.js. With more than three products the
+// title switches to a general one, so it stays within the ~60 characters search results show.
 export const metadata = buildMetadata({
-  title: "Software Products | ClinOva, SIS and DRS | Alfa Calix",
-  description:
-    "Explore Alfa Calix Technologies software products, including ClinOva for clinical practical assessments, SIS for student information management and DRS for academic document requests.",
+  title:
+    products.length <= 3
+      ? `Software Products | ${productList()} | Alfa Calix`
+      : "Software Products for Institutions | Alfa Calix Technologies",
+  description: `Explore Alfa Calix Technologies software products, including ${productList(
+    "and",
+    (p) => `${p.name} for ${p.purpose}`,
+  )}.`,
   path: "/products",
 });
 
@@ -55,7 +62,7 @@ export default function ProductsPage() {
 
       <CtaBand
         title="Interested in One of Our Products?"
-        text="Get in touch to learn more about how ClinOva, SIS or DRS could support your institution, or to discuss a tailored solution."
+        text={`Get in touch to learn more about how ${productList("or")} could support your institution, or to discuss a tailored solution.`}
         primary={{ label: "Make a Product Enquiry", href: "/contact" }}
         secondary={{ label: "Explore Our Services", href: "/services" }}
       />

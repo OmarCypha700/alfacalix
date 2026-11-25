@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept B, Held v2</title>
+  <!-- Disc r=112 centred (128,128). An A (2:1 legs, 24-unit band, apex y=40, feet y=184) is cut out of it as one
+       outline; its crossbar (y 136-162) runs out through the right edge, opening the disc into a C.
+       The A's counter stays solid. One compound path, evenodd. -->
+  <path fill="#111" fill-rule="evenodd" d="
+    M128 16 A112 112 0 1 1 128 240 A112 112 0 1 1 128 16 Z
+    M128 40 L176 136 L239.71 136 A112 112 0 0 1 234.71 162 L189 162 L200 184 L173.17 184 L162.17 162
+    L93.83 162 L82.83 184 L56 184 Z
+    M128 93.67 L149.17 136 L106.83 136 Z"/>
+</svg>

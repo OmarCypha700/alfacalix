@@ -1,126 +1,171 @@
-# Alfa Calix Technologies — corporate website
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="brand/logo/png/alfa-calix-horizontal-dark-1200.png">
+    <img src="brand/logo/png/alfa-calix-horizontal-color-1200.png" alt="Alfa Calix Technologies" width="420">
+  </picture>
+</p>
 
-The corporate marketing website for **Alfa Calix Technologies**, a technology brand operated by Alfa Calix Enterprise.
+<h3 align="center">Building Intelligent Software. Empowering Institutions.</h3>
 
-Built with Next.js 16 (App Router, JavaScript, Cache Components), Tailwind CSS 4, Motion (Framer Motion), Lucide icons, React Hook Form and Zod. There is no database, CMS or authentication. Product landing pages (ClinOva, SIS, DRS) are hosted separately and linked from here.
+<p align="center">
+  Practical software products and technology solutions that help institutions and businesses<br>
+  simplify operations, improve efficiency and embrace digital transformation.
+</p>
 
-## Quick start
+<p align="center">
+  <a href="#get-in-touch"><strong>Start a conversation</strong></a> &nbsp;·&nbsp;
+  <a href="#our-products"><strong>Explore our products</strong></a> &nbsp;·&nbsp;
+  <a href="#our-services"><strong>See our services</strong></a>
+</p>
 
-Requires Node.js 20.19+ or 22.13+ (some lint tooling warns on older 22.x).
+---
 
-```bash
-npm install
-cp .env.example .env.local   # then fill in what you have
-npm run dev                  # http://localhost:3000
-npm run lint
-npm run build && npm run start
-```
+## Who we are
 
-## Project structure
+Alfa Calix Technologies is a software development and technology solutions company in Ghana. We build our own
+software products for institutions, and we design and develop tailored digital solutions for organisations whose
+needs off-the-shelf tools don't meet.
 
-```
-src/
-  app/                 Pages (App Router), API route, sitemap, robots, OG image, icon
-    api/contact/       Contact form handler (Brevo)
-  components/
-    layout/            Header, mobile nav, footer
-    home/              Homepage sections and hero visual
-    products/          Product card, detail, preview sketch, link/coming-soon state
-    services/          Service item and detail
-    contact/           Contact form (client component)
-    shared/            Container, Section, headings, Reveal, CTA band, breadcrumbs, JSON-LD
-    ui/                shadcn/ui-style primitives (button, input, textarea, label, select)
-  data/                ← Edit content here
-    company.js         Brand, legal name, mission/vision/values, contact, socials, logo
-    products.js        ClinOva, SIS, DRS content and landing-page URLs
-    services.js        The six services
-    navigation.js      Menu items and header CTA
-  lib/
-    seo.js             Per-page metadata helper and JSON-LD builders
-    contact-schema.js  Shared validation for the contact form and API
-public/
-  images/products/<slug>/   Put real product screenshots here
-  logos/                    Put the official logo here
-```
+Our focus is simple: **technology that solves real problems.** We start by understanding how your organisation
+actually works, then build software that makes everyday processes simpler, faster and easier to manage, and we stay
+with you after launch.
 
-## Environment variables
+**We work with:** universities, colleges and tertiary institutions · nursing and midwifery training institutions ·
+schools and educational organisations · businesses · public and private institutions.
 
-All variables are listed in [`.env.example`](.env.example). Anything left empty is simply **not shown** on the site and is left out of structured data.
+---
 
-| Variable | Purpose |
+## Our products
+
+Purpose-built software, already designed around the way institutions work. Each product can be demonstrated to your
+team with sample data.
+
+<br>
+
+### <img src="public/images/products/clinova/clinova-mark.png" alt="" width="32" align="top"> ClinOva: clinical assessment and examination management
+
+**Clinical practical examinations, organised end to end.** ClinOva replaces paper score sheets with a digital workflow
+built for nursing and midwifery training institutions: examiners score each procedure step on a phone or tablet, two
+examiners can assess the same candidate, and their scores are reconciled in the system.
+
+- Digital clinical practical assessments
+- Structured examiner scoring, with support for multiple examiners
+- Score reconciliation between examiners
+- Centralised assessment records for coordinators
+
+**Designed for:** nursing and midwifery training institutions, examination coordinators, clinical examiners and
+academic administrators.
+
+<img src="public/images/products/clinova/clinova-student-procedures.webp" alt="ClinOva's Student Procedures view: each assessment with both examiners' scores, status and reconciliation" width="720">
+
+**[Visit the ClinOva website](https://clinovasite.vercel.app)** or [ask us for a demo](#get-in-touch).
+
+<br>
+
+### <img src="public/images/products/sis/sis-mark.svg" alt="" width="32" align="top"> SIS: Student Information System
+
+**One place for student records, registration and results.** SIS brings an institution's core academic administration
+into a single platform, with dedicated portals for students, lecturers and administrators.
+
+- Student records management
+- Online course registration
+- Academic results management
+- Student and lecturer portals, with administrative dashboards
+
+**Designed for:** universities, colleges and tertiary institutions, registry and academic affairs offices,
+lecturers and heads of department, and students.
+
+<img src="public/images/products/sis/sis-admin-dashboard.webp" alt="SIS administrator dashboard: active students, registrations, course offerings and outstanding work" width="720">
+
+**[Request an SIS demo](#get-in-touch)**
+
+<br>
+
+### <img src="public/images/products/drs/drs-mark.png" alt="" width="32" align="top"> DRS: Document Request System
+
+**Academic document requests, without the queue.** DRS lets students and alumni request transcripts, certificates
+and other academic documents online, from anywhere, while registry staff manage, track and process every request
+in one place.
+
+- Online document requests and remote application submission
+- Integrated payment for requested documents
+- Request tracking and processing for registry staff
+- Convenient access for students and alumni
+
+**Designed for:** universities, colleges and training institutions, registry and records offices, current students
+and alumni.
+
+<img src="public/images/products/drs/drs-registry-queue.webp" alt="DRS registry queue: document requests with applicant, status, payment, delivery method and total" width="720">
+
+**[Request a DRS demo](#get-in-touch)**
+
+<sub>Screens show sample data.</sub>
+
+---
+
+## Our services
+
+Beyond our own products, we help organisations identify opportunities, solve operational challenges and build
+effective digital systems.
+
+| Service | What we do |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Production URL, e.g. `https://www.example.com` (no trailing slash). Used for canonical URLs, sitemap, robots, Open Graph and schema. |
-| `NEXT_PUBLIC_CLINOVA_URL`, `NEXT_PUBLIC_SIS_URL`, `NEXT_PUBLIC_DRS_URL` | Product landing pages. Must start with `https://`. Empty shows a “site coming soon” state. |
-| `NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_CONTACT_PHONE` | Public contact details. |
-| `NEXT_PUBLIC_SOCIAL_*` | LinkedIn, X, Facebook, Instagram, GitHub profile URLs. |
-| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, `NEXT_PUBLIC_BING_SITE_VERIFICATION` | Optional meta-tag verification tokens. |
-| `BREVO_API_KEY` | **Secret.** Brevo API v3 key for the contact form. |
-| `CONTACT_TO_EMAIL` | **Secret.** Inbox that receives enquiries. |
-| `CONTACT_FROM_EMAIL`, `CONTACT_FROM_NAME` | **Secret.** Verified Brevo sender address and display name. |
+| **Custom Software Development** | Tailored applications built around your organisation's own processes, with a focus on usability, scalability and long-term value. |
+| **Web Application Development** | Modern, responsive and secure web applications that bring services online, automate processes and improve access. |
+| **Institutional Systems Development** | Platforms for academic administration, student information management and other specialised institutional processes. |
+| **Website Design and Development** | Professional, responsive websites that strengthen your identity and help people find you online. |
+| **Systems Integration and Process Automation** | Connecting the systems you already use and automating repetitive work, so information flows without re-entry. |
+| **Software Maintenance and Technical Support** | Ongoing support, fixes, updates and improvements that keep your software reliable as your needs change. |
 
-`NEXT_PUBLIC_*` values are inlined at **build time**, so redeploy after changing them on Vercel.
+**Is one of these what you need?** [Tell us about your project](#get-in-touch).
 
-## Updating content
+---
 
-- **Product landing-page URLs**: set `NEXT_PUBLIC_CLINOVA_URL` / `_SIS_URL` / `_DRS_URL` in Vercel and redeploy. No code changes needed.
-- **Product text, features and audiences**: edit `src/data/products.js`.
-- **Product screenshots**: each product has three real screens in `public/images/products/<slug>/`, listed under `screens` in `src/data/products.js`: `card` (780×780 phone crop, homepage), `desktop` (2000×1250 crop of the main content, no sidebar) and `phone` (780 wide, overlaid on the Products page). They were taken from the actual apps using sample data only: ClinOva's own sample screens, SIS's `seed_demo` (the fictitious Northridge College) and fictitious DRS requests. To update one, replace the file or change its path, `width`, `height` and `alt`. Never use screens that show real students or a client institution's logo.
-- **Product icons**: `mark` in `src/data/products.js` (ClinOva's shield and DRS's "D" icon, from their own projects). SIS has no icon yet, so it shows a text monogram until one is added.
-- **Contact details and social links**: set the `NEXT_PUBLIC_CONTACT_*` and `NEXT_PUBLIC_SOCIAL_*` variables.
-- **Logo**: add the file to `public/logos/` and set `logo` (and optionally `logoDark` for navy backgrounds) in `src/data/company.js`. The temporary text wordmark is replaced everywhere.
-- **Leadership profiles** (About page): add verified entries to `leadership` in `src/data/company.js`. The section stays hidden while the list is empty.
-- **Services**: edit `src/data/services.js`. Only list services that are confirmed.
-- **Colours and type**: edit the tokens at the top of `src/app/globals.css`.
-- **Privacy Policy**: `src/app/privacy/page.js`. Have it reviewed before launch (see the note at the top of the file) and update the effective date.
-- **Sitemap date**: update `lastUpdated` in `src/data/company.js` after significant content changes.
+## Why Alfa Calix Technologies
 
-## Contact form (Brevo)
+- **We start with your problem, not with technology.** We learn how your organisation works before we design
+  anything, so the solution fits real needs.
+- **Purpose-built, not one-size-fits-all.** Our products and projects are shaped around specific operational
+  requirements and the people who use them.
+- **Designed for the people who use it.** Simple, accessible software that staff, students and clients can use
+  without a manual.
+- **We stay after launch.** Software should improve as your needs change. We provide ongoing support and continuous
+  improvement.
 
-The form posts to `/api/contact`, which validates input with Zod, rejects spam via a honeypot field, applies a light per-IP rate limit and sends the enquiry with the [Brevo transactional email API](https://developers.brevo.com/reference/sendtransacemail). The visitor's address is set as **Reply-To**, so you can reply directly.
+## How we work
 
-1. Create a Brevo account and an API key (SMTP & API → API Keys).
-2. Verify the sender address or domain you will use as `CONTACT_FROM_EMAIL` (Senders, Domains & Dedicated IPs). Authenticating the domain (SPF/DKIM) improves deliverability.
-3. Set `BREVO_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` (and optionally `CONTACT_FROM_NAME`) in Vercel. These are server-only and never sent to the browser.
+| 1. Understand | 2. Design | 3. Develop | 4. Support |
+| --- | --- | --- | --- |
+| We learn about your organisation, its needs and the challenges you want to solve. | We shape the right solution and define exactly what it needs to do. | We build, test and refine it with attention to quality and usability. | We provide ongoing technical support and improvements where required. |
 
-If any of the three required values is missing, the API returns `503 not_configured` and the form tells the visitor their message was **not** sent. The form only shows success when Brevo accepts the message.
+---
 
-## Deploying to Vercel
+## Get in touch
 
-1. Push this repository to GitHub.
-2. In Vercel, choose **Add New → Project**, import the repository and keep the detected Next.js settings. The project sits at the repository root, so leave **Root Directory** empty.
-3. Add the environment variables (Production, and Preview if wanted).
-4. Deploy.
+**Ready to see how technology can help your organisation?** Whether you're interested in ClinOva, SIS or DRS, or
+need a custom platform, website or integration, we would be glad to learn about your requirements and talk through
+the options.
 
-### Custom domain
+Tell us about:
 
-1. Vercel → Project → **Settings → Domains** → add your domain (e.g. `example.com` and `www.example.com`).
-2. At your DNS provider, add the records Vercel shows: usually an `A` record for the apex domain and a `CNAME` for `www` pointing to Vercel.
-3. Choose one primary domain and let the other redirect to it.
-4. Set `NEXT_PUBLIC_SITE_URL` to that primary domain (with `https://`) and redeploy.
+- **A product demo:** which product, and roughly how many students, staff or users it would serve
+- **A custom project:** what you want to improve, and any systems you already use
+- **A partnership:** who you are and what you have in mind
 
-## Search engine setup
+<!--
+  CONTACT DETAILS: replace the three lines below with the real website address, email and phone/WhatsApp
+  before this README is shared. Delete any line you don't want to publish.
+-->
+- **Website:** `alfacalix.vercel.app`
+- **Email:** `adjeikumicaleb@gmail.com`
+- **Phone / WhatsApp:** `233555089184`
 
-After the site is live on its final domain and `NEXT_PUBLIC_SITE_URL` is set:
+---
 
-### Google Search Console
-
-1. Go to <https://search.google.com/search-console> and add a property. The **Domain** property is recommended and is verified with a DNS TXT record. Alternatively use a **URL prefix** property and the HTML-tag method: put only the `content` token in `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, then redeploy.
-2. Open **Sitemaps** and submit `https://<your-domain>/sitemap.xml`.
-3. Use **URL Inspection** on the homepage and request indexing.
-
-### Bing Webmaster Tools
-
-1. Go to <https://www.bing.com/webmasters> and add the site. You can **import from Google Search Console**, or verify with the meta tag (`NEXT_PUBLIC_BING_SITE_VERIFICATION`) or DNS.
-2. Submit `https://<your-domain>/sitemap.xml` under **Sitemaps**.
-
-### What is already in place
-
-- Unique title, description and canonical URL for every page
-- Open Graph and Twitter/X cards with a generated 1200×630 image (`/opengraph-image`)
-- `/sitemap.xml` and `/robots.txt` (all pages allowed; only `/api/` is disallowed)
-- JSON-LD: `Organization` and `WebSite` site-wide, `BreadcrumbList` on inner pages and `Service` items on `/services`. Only verified details are included; contact details and social profiles are added automatically once configured.
-- A single H1 per page, semantic landmarks, server-rendered content and a custom 404 page (`noindex`)
-
-## Future integrations
-
-The site has no analytics or tracking cookies. If you add Google Analytics 4 or Tag Manager later, add a consent mechanism and update the Privacy Policy's cookies section first. A WhatsApp link, newsletter or CRM can be added as new config values or components without changing the architecture.
+<p align="center">
+  <sub>
+    © 2026 Alfa Calix Technologies. All rights reserved.<br>
+    Alfa Calix Technologies is a technology brand operated by Alfa Calix Enterprise.<br>
+    This repository contains the company website. Team members: see the <a href="docs/DEVELOPMENT.md">developer guide</a>.
+  </sub>
+</p>

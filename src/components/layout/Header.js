@@ -13,7 +13,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-line/80 bg-canvas/85 backdrop-blur-md supports-[backdrop-filter]:bg-canvas/75">
       <Container className="flex h-[4.5rem] items-center justify-between gap-6">
         <Link href="/" aria-label={`${company.brandName} home`} className="rounded-lg">
-          <Wordmark />
+          <Wordmark preload className="h-9 sm:h-10" />
         </Link>
 
         <nav aria-label="Main" className="hidden lg:block">

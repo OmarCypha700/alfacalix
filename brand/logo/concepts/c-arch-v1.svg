@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept C, Arch v1</title>
+  <!-- Equilateral pointed arch: each side is an arc whose radius equals the span (176), centred on the opposite
+       springing point. Band 36 (inner radius 140, same centres). Crossbar y 156-184 joins the inner faces. -->
+  <path fill="#111" d="
+    M40 216 A176 176 0 0 1 128 63.58 A176 176 0 0 1 216 216 L180 216 A140 140 0 0 0 128 107.06 A140 140 0 0 0 76 216 Z
+    M86 156 H170 V184 H86 Z"/>
+</svg>

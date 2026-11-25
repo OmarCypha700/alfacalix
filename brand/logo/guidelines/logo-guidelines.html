@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Alfa Calix Technologies: logo guidelines</title>
+<style>
+  :root { --navy:#0B1B33; --cyan:#109FB0; --slate:#4A5568; --mist:#F7F8FA; --line:#E3E7EE; --bad:#C0392B; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--navy); font-family:"Plus Jakarta Sans","Segoe UI",Arial,sans-serif; width:1400px; }
+  .page { padding:64px 72px 72px; }
+  header { display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid var(--navy); padding-bottom:24px; }
+  header h1 { font-size:40px; margin:0; letter-spacing:-0.02em; }
+  header p { margin:8px 0 0; color:var(--slate); font-size:16px; }
+  header img { height:72px; }
+  h2 { font-size:22px; margin:48px 0 6px; letter-spacing:-0.01em; }
+  .lead { color:var(--slate); margin:0 0 20px; font-size:15px; line-height:1.5; max-width:820px; }
+  .grid { display:grid; gap:20px; }
+  .tile { border-radius:16px; display:flex; align-items:center; justify-content:center; position:relative; outline:1px solid var(--line); outline-offset:-1px; }
+  .tile .cap { position:absolute; left:16px; bottom:12px; font-size:12px; color:var(--slate); }
+  .tile.dark .cap { color:#B3C2DB; }
+  .light { background:#fff; } .mist { background:var(--mist); } .dark { background:var(--navy); outline:none; }
+  .g2 { grid-template-columns: 1fr 1fr; } .g5 { grid-template-columns: repeat(5, 1fr); } .g4 { grid-template-columns: repeat(4, 1fr); }
+  .clear { display:flex; gap:40px; align-items:center; }
+  .zone { position:relative; padding:34px; outline:2px dashed var(--cyan); outline-offset:0; background:
+          repeating-linear-gradient(45deg, rgba(16,159,176,.07) 0 6px, transparent 6px 12px); }
+  .zone img { display:block; width:640px; background:#fff; }
+  .x { position:absolute; font-size:13px; font-weight:700; color:var(--cyan); }
+  .x.t { top:8px; left:50%; } .x.l { left:10px; top:50%; } .x.r { right:10px; top:50%; } .x.b { bottom:8px; left:50%; }
+  .note { font-size:15px; line-height:1.6; color:var(--slate); max-width:420px; }
+  .note b { color:var(--navy); }
+  .mins { display:flex; gap:48px; align-items:flex-end; margin-top:8px; }
+  .mins figure { margin:0; text-align:left; } .mins figcaption { font-size:12px; color:var(--slate); margin-top:8px; }
+  .swatch { border-radius:16px; overflow:hidden; outline:1px solid var(--line); outline-offset:-1px; }
+  .swatch .chip { height:120px; } .swatch .info { padding:14px 16px; font-size:13px; line-height:1.6; color:var(--slate); }
+  .swatch .info b { color:var(--navy); font-size:15px; display:block; }
+  .type { display:grid; grid-template-columns: 1.2fr 1fr; gap:20px; }
+  .type .tile { height:180px; padding:24px; }
+  .type ul { margin:0; padding-left:18px; font-size:15px; line-height:1.7; color:var(--slate); }
+  .type ul b { color:var(--navy); }
+  .dont .tile { height:170px; overflow:hidden; }
+  .dont .tile::after { content:"\2715"; position:absolute; top:10px; right:14px; color:var(--bad); font-weight:700; font-size:18px; }
+  .dont .tile .cap { color:var(--bad); }
+  .busy { background: repeating-linear-gradient(120deg, #e9b44c 0 18px, #9b2335 18px 36px, #2e86ab 36px 54px); }
+  footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); font-size:13px; color:var(--slate); display:flex; justify-content:space-between; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Logo guidelines</h1>
+      <p>Alfa Calix Technologies · a technology brand operated by Alfa Calix Enterprise</p>
+    </div>
+    <img src="../svg/alfa-calix-horizontal-color.svg" alt="Alfa Calix Technologies logo">
+  </header>
+
+  <h2>The logo</h2>
+  <p class="lead">The A of <b>Alfa</b> is carved out of a disc; its crossbar breaks out through the edge, opening the disc into the C of <b>Calix</b>. Alfa, held within Calix. The cyan core is what the company builds: the product at the heart of the institution.</p>
+  <div class="grid g2">
+    <div class="tile light" style="height:260px"><img src="../svg/alfa-calix-horizontal-color.svg" style="width:520px" alt=""><span class="cap">Primary: horizontal, full colour, on white</span></div>
+    <div class="tile dark" style="height:260px"><img src="../svg/alfa-calix-horizontal-dark.svg" style="width:520px" alt=""><span class="cap">Horizontal, dark version, on Calix Navy</span></div>
+  </div>
+  <div class="grid g5" style="margin-top:20px">
+    <div class="tile light" style="height:220px"><img src="../svg/alfa-calix-stacked-color.svg" style="width:190px" alt=""><span class="cap">Stacked</span></div>
+    <div class="tile light" style="height:220px"><img src="../svg/alfa-calix-symbol-color.svg" style="width:130px" alt=""><span class="cap">Symbol</span></div>
+    <div class="tile dark" style="height:220px"><img src="../svg/alfa-calix-symbol-dark.svg" style="width:130px" alt=""><span class="cap">Symbol, dark</span></div>
+    <div class="tile mist" style="height:220px"><img src="../svg/alfa-calix-horizontal-navy.svg" style="width:200px" alt=""><span class="cap">One colour: navy (also black, white)</span></div>
+    <div class="tile mist" style="height:220px"><img src="../web-icons/icon-512.png" style="width:120px;border-radius:26px" alt=""><span class="cap">App icon (solid symbol on navy)</span></div>
+  </div>
+
+  <h2>Clear space</h2>
+  <p class="lead">Keep <b>1x</b> clear on every side, where <b>x</b> is the height of the cyan core: about 22 % of the disc's diameter. The zone scales with the logo.</p>
+  <div class="clear">
+    <div class="zone">
+      <span class="x t">x</span><span class="x l">x</span><span class="x r">x</span><span class="x b">x</span>
+      <img src="../svg/alfa-calix-horizontal-color.svg" alt="">
+    </div>
+    <div class="note">
+      <b>Minimum sizes</b><br>
+      Horizontal: 180 px wide on screen, 40 mm in print.<br>
+      Stacked: 120 px wide, 28 mm.<br>
+      Symbol: 24 px, 8 mm.<br>
+      Symbol small cut: 16 px, 5 mm (favicons and tiny UI only).<br><br>
+      Below the horizontal minimum, use the symbol on its own.
+      <div class="mins">
+        <figure><img src="../svg/alfa-calix-horizontal-color.svg" style="width:180px" alt=""><figcaption>180 px</figcaption></figure>
+        <figure><img src="../svg/alfa-calix-symbol-color.svg" style="width:24px" alt=""><figcaption>24 px</figcaption></figure>
+        <figure><img src="../svg/alfa-calix-symbol-small-solid.svg" style="width:16px" alt=""><figcaption>16 px</figcaption></figure>
+      </div>
+    </div>
+  </div>
+
+  <h2>Colour</h2>
+  <p class="lead">Two colours carry the logo; white, slate and mist support it. CMYK values are calculated starting points: have the printer proof them and match Pantone spot colours from a physical swatch book.</p>
+  <div class="grid g5">
+    <div class="swatch"><div class="chip" style="background:#0B1B33"></div><div class="info"><b>Calix Navy</b>#0B1B33<br>RGB 11 27 51<br>CMYK 78 47 0 80</div></div>
+    <div class="swatch"><div class="chip" style="background:#109FB0"></div><div class="info"><b>Alfa Cyan</b>#109FB0<br>RGB 16 159 176<br>CMYK 91 10 0 31</div></div>
+    <div class="swatch"><div class="chip" style="background:#FFFFFF"></div><div class="info"><b>White</b>#FFFFFF<br>RGB 255 255 255<br>CMYK 0 0 0 0</div></div>
+    <div class="swatch"><div class="chip" style="background:#4A5568"></div><div class="info"><b>Slate (text)</b>#4A5568<br>RGB 74 85 104<br>CMYK 29 18 0 59</div></div>
+    <div class="swatch"><div class="chip" style="background:#F7F8FA"></div><div class="info"><b>Mist (backgrounds)</b>#F7F8FA<br>RGB 247 248 250<br>CMYK 1 1 0 2</div></div>
+  </div>
+
+  <h2>Typography</h2>
+  <div class="type">
+    <div class="tile light"><img src="../svg/alfa-calix-horizontal-navy.svg" style="width:440px" alt=""><span class="cap">Wordmark: Plus Jakarta Sans Bold + SemiBold, outlined</span></div>
+    <div class="tile mist" style="justify-content:flex-start">
+      <ul>
+        <li><b>Headings:</b> Plus Jakarta Sans, 500–800</li>
+        <li><b>Body:</b> Inter, 400–600</li>
+        <li><b>Fallback:</b> Segoe UI or Arial</li>
+        <li>Both brand fonts are free (SIL Open Font License, Google Fonts) and match the website.</li>
+        <li>Never retype the logo: always use the supplied files.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Don'ts</h2>
+  <div class="grid g4 dont">
+    <div class="tile light"><img src="../svg/alfa-calix-horizontal-color.svg" style="width:260px;transform:scaleX(1.35)" alt=""><span class="cap">Don't stretch or squash</span></div>
+    <div class="tile light"><img src="../svg/alfa-calix-horizontal-color.svg" style="width:240px;filter:hue-rotate(140deg) saturate(2)" alt=""><span class="cap">Don't recolour</span></div>
+    <div class="tile light"><img src="../svg/alfa-calix-horizontal-color.svg" style="width:240px;filter:drop-shadow(6px 8px 6px rgba(0,0,0,.45))" alt=""><span class="cap">Don't add shadows or effects</span></div>
+    <div class="tile busy"><img src="../svg/alfa-calix-horizontal-color.svg" style="width:240px" alt=""><span class="cap" style="background:#fff;padding:2px 6px;border-radius:4px">Don't place on busy backgrounds</span></div>
+  </div>
+
+  <footer>
+    <span>Master files: brand/logo (svg, png, web-icons). Full guidance: logo-guidelines.md</span>
+    <span>Trademark clearance pending</span>
+  </footer>
+</div>
+</body>
+</html>

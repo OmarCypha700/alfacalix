@@ -1,5 +1,6 @@
 import { Mail, Phone } from "lucide-react";
 import { company } from "@/data/company";
+import { productList } from "@/data/products";
 import { buildMetadata } from "@/lib/seo";
 import { PageHero } from "@/components/shared/PageHero";
 import { Container } from "@/components/shared/Container";
@@ -13,7 +14,7 @@ export const metadata = buildMetadata({
 });
 
 const topics = [
-  "Our software products: ClinOva, SIS and DRS",
+  `Our software products: ${productList()}`,
   "Custom software and web application development",
   "Institutional systems and website projects",
   "Technical support and partnerships",

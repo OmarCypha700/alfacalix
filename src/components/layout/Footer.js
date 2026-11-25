@@ -36,7 +36,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" aria-label={`${company.brandName} home`} className="inline-block rounded-lg">
-              <Wordmark tone="light" />
+              <Wordmark tone="light" className="h-11" />
             </Link>
             <p className="mt-6 max-w-sm leading-relaxed text-navy-200">{company.description}</p>
 

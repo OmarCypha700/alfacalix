@@ -1,0 +1,39 @@
+{
+  "brand": "Alfa Calix Technologies",
+  "tagline": "Building Intelligent Software. Empowering Institutions.",
+  "brief": "A software products and technology solutions company serving educational institutions, businesses and organisations, from Ghana outward. The identity must feel professional, intelligent, reliable and forward-thinking: a serious software company, never a gaming, crypto, telecoms or IT-repair look.",
+  "adjectives": ["professional", "intelligent", "reliable", "forward-thinking", "simple"],
+  "criteria": "Success: distinct from generic tech marks, recognisable without the name, clear at 16 px, works in one colour and reversed, credible to institutional decision-makers.",
+  "mockups": ["website", "business-card", "app-icon", "signage", "social", "badge"],
+  "nav": ["Products", "Services", "About", "Contact"],
+  "brand_color": "#0B1B33",
+  "greyscale": false,
+  "final": true,
+  "designer": "Alfa Calix Technologies",
+  "concepts": [
+    {
+      "name": "Held",
+      "symbol": "../svg/alfa-calix-symbol-color.svg",
+      "lockup": "../svg/alfa-calix-horizontal-color.svg",
+      "stacked": "../svg/alfa-calix-stacked-color.svg",
+      "avatar": "../svg/alfa-calix-symbol-solid.svg",
+      "symbol_on_tile": "../svg/alfa-calix-symbol-solid-dark.svg",
+      "lockup_on_dark": "../svg/alfa-calix-horizontal-dark.svg",
+      "tile_color": "#0B1B33",
+      "idea": "The A of Alfa is carved out of a disc, and its crossbar breaks out through the edge to open the disc into the C of Calix: Alfa, held within Calix.",
+      "rationale": [
+        "One idea, both initials: an A you read at once, a C you notice second",
+        "The crossbar breaking out reads as connection and forward movement without an arrow",
+        "The cyan core is what the company builds: the product at the heart of the institution",
+        "A solid disc survives 16 px favicons, app icons, avatars and one-colour print",
+        "Plus Jakarta Sans wordmark matches the company website"
+      ]
+    }
+  ],
+  "recommendation": "Held: simple, credible and ownable, with a symbol strong enough to stand alone across products, documents and screens.",
+  "next_steps": [
+    "Professional trademark clearance (classes 9 and 42)",
+    "Replace the website's temporary wordmark and favicon",
+    "Apply to documents, email signatures and product login screens"
+  ]
+}

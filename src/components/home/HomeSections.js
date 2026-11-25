@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Lightbulb, Puzzle, RefreshCw, Users } from "lucide-react";
 import { products } from "@/data/products";
+import { cn } from "@/lib/utils";
 import { services } from "@/data/services";
 import { ButtonLink } from "@/components/ui/button";
 import { Section } from "@/components/shared/Container";
@@ -48,6 +49,14 @@ export function Intro() {
 }
 
 /* ------------------------------ 3. Products ------------------------------ */
+
+/** Grid columns that keep rows full for any number of products (1 centred; 2 and 4 in pairs; otherwise threes). */
+function productGridClass(count) {
+  if (count === 1) return "mx-auto max-w-md";
+  if (count === 2 || count === 4) return "md:grid-cols-2";
+  return "md:grid-cols-2 lg:grid-cols-3";
+}
+
 export function ProductsShowcase() {
   return (
     <Section id="products">
@@ -65,7 +74,7 @@ export function ProductsShowcase() {
           <ArrowRight aria-hidden="true" className="size-4" />
         </Link>
       </Reveal>
-      <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className={cn("mt-14 grid gap-6", productGridClass(products.length))}>
         {products.map((product, index) => (
           <Reveal key={product.slug} delay={index * 0.08} className="h-full">
             <ProductCard product={product} />

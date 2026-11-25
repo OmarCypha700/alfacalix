@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept C, Arch v2 (catenary)</title>
+  <!-- A catenary-style arch (parabola: outer apex y=64, inner apex y=108) whose legs lean like an A,
+       plus a crossbar y 156-182 bridging the legs. -->
+  <path fill="#111" d="
+    M40 216 Q128 -88 216 216 L180 216 Q128 0 76 216 Z
+    M80 156 H176 V182 H80 Z"/>
+</svg>

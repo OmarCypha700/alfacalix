@@ -21,6 +21,7 @@ export const products = [
     fullName: "ClinOva",
     category: "Clinical Assessment and Examination Management",
     shortLabel: "Clinical assessment",
+    purpose: "clinical practical assessments",
     tagline: "Clinical practical examinations, organised end to end.",
     summary:
       "ClinOva is a digital clinical practical assessment and examination management solution designed for nursing and midwifery training institutions. It helps streamline practical examinations, manage assessment workflows, record examiner scores and support a more organised assessment process.",
@@ -78,6 +79,7 @@ export const products = [
     fullName: "Student Information System (SIS)",
     category: "Student and Academic Information Management",
     shortLabel: "Student information",
+    purpose: "student information management",
     tagline: "One place for student records, registration and results.",
     summary:
       "SIS is a student information management platform that helps educational institutions manage essential academic and administrative processes from a centralised digital environment, with dedicated interfaces for students, lecturers and administrators.",
@@ -105,7 +107,8 @@ export const products = [
       "Lecturers and heads of department",
       "Students",
     ],
-    mark: null,
+    // "Hub" symbol from the SIS brand kit (SIS Frontend/SIS-Brand-Identity/Logo/Symbol).
+    mark: { src: "/images/products/sis/sis-mark.svg" },
     screens: {
       card: {
         src: "/images/products/sis/sis-student-results-card.webp",
@@ -135,6 +138,7 @@ export const products = [
     fullName: "Document Request System (DRS)",
     category: "Academic Document Request and Processing",
     shortLabel: "Document requests",
+    purpose: "academic document requests",
     tagline: "Academic document requests, without the queue.",
     summary:
       "DRS is a digital document request platform that enables students and alumni to request academic documents remotely, while helping institutions organise requests, manage processing and facilitate payment through a structured digital workflow.",
@@ -197,4 +201,14 @@ export function getProductLink(product) {
 
 export function getProduct(slug) {
   return products.find((p) => p.slug === slug);
+}
+
+/**
+ * Product names as natural English lists, so page copy and metadata stay in step with this file:
+ * productList() -> "ClinOva, SIS and DRS"; productList("or") -> "ClinOva, SIS or DRS";
+ * productList("and", (p) => `${p.name} for ${p.purpose}`) -> "ClinOva for clinical practical assessments, …".
+ */
+export function productList(conjunction = "and", label = (p) => p.name) {
+  const type = conjunction === "or" ? "disjunction" : "conjunction";
+  return new Intl.ListFormat("en-GB", { style: "long", type }).format(products.map(label));
 }

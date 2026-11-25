@@ -71,7 +71,7 @@ export function organizationSchema() {
       "Business process automation",
     ],
   };
-  if (company.logo) schema.logo = absoluteUrl(company.logo);
+  if (company.logoSquare || company.logo) schema.logo = absoluteUrl(company.logoSquare || company.logo);
   if (company.contact.email) schema.email = company.contact.email;
   if (company.contact.phone) schema.telephone = company.contact.phone;
   if (company.social.length) schema.sameAs = company.social.map((s) => s.href);

@@ -1,5 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0b1b33"/>
-  <text x="32" y="42" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#ffffff" letter-spacing="-1">AC</text>
-  <circle cx="52" cy="12" r="5" fill="#27bccc"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><title>Alfa Calix Technologies</title><g transform="translate(-3.07 -3.07) scale(1.024)">
+  <title id="title">Alfa Calix Technologies symbol, small-size cut, solid</title>
+  <g id="symbol"><path fill="#FFFFFF" d="M128 28 L184 140 L247.4 140 A120 120 0 0 1 241.14 168 L198 168 L208 188 L174.46 188 L164.46 168 L91.54 168 L81.54 188 L48 188 Z"/><path fill="#0B1B33" fill-rule="evenodd" d="M128 8 A120 120 0 1 1 128 248 A120 120 0 1 1 128 8 Z M128 28 L184 140 L247.4 140 A120 120 0 0 1 241.14 168 L198 168 L208 188 L174.46 188 L164.46 168 L91.54 168 L81.54 188 L48 188 Z"/><path fill="#109FB0" d="M128 95.08 L150.46 140 L105.54 140 Z"/></g>
+</g></svg>

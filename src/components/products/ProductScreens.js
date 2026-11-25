@@ -28,7 +28,7 @@ export function ProductCardScreen({ product, className }) {
 }
 
 /** Desktop screen with the phone screen set over its lower corner (Products page). */
-export function ProductDetailScreens({ product, priority = false, className }) {
+export function ProductDetailScreens({ product, preload = false, className }) {
   const { desktop, phone } = product.screens;
   return (
     <div className={cn("relative pb-[12%] pr-[6%]", className)}>
@@ -39,7 +39,7 @@ export function ProductDetailScreens({ product, priority = false, className }) {
           width={desktop.width}
           height={desktop.height}
           sizes="(min-width: 1200px) 560px, (min-width: 1024px) 46vw, 94vw"
-          priority={priority}
+          preload={preload}
           className="h-auto w-full"
         />
       </div>

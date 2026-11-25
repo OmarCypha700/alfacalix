@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">Concept C, Arch v4 (catenary with floating crossbar, centred)</title>
+  <!-- Catenary-style arch (parabola: outer apex y=52, inner apex y=96), legs leaning like an A, feet at y=204.
+       The crossbar floats inside the arch with a 10-unit gap: the structure and the layer it carries. -->
+  <path fill="#111" d="M40 204 Q128 -100 216 204 L180 204 Q128 -12 76 204 Z"/>
+  <rect x="103" y="142" width="50" height="26" fill="#111"/>
+</svg>
